@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Tab Name -->
+    <title>My First Website</title>
+
+    <!-- Viewport is the user's visible area of web page sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <!-- Link style sheet here -->
+    <style>
+      /* Grid */
+      .grid {
+        margin-top: 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        height: 90vw;
+        gap: 2vw;
+        width: 90vw;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      /* Centers columns */
+      /* align-self: center; */
+      /* Centers rows */
+      /* justify-self: center; */
+      .rowOne {
+        grid-row: 1 / span 1;
+        width: 40vw;
+        height: 26vw;
+        grid-column: 1 / span 1;
+      }
+
+      .rowTwo {
+        height: 26vw;
+        width: 40vw;
+        align-self: center;
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+      }
+      .rowThree {
+        height: 26vw;
+        width: 40vw;
+        align-self: center;
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+      }
+      .colTwo {
+        grid-row: 1 / span 4;
+        grid-column: 2 / span 1;
+        width: 40vw;
+      }
+      .mapImage {
+        margin: 10px;
+        grid-row: 1 / span 4;
+        grid-column: 3 / span 2;
+        align-self: center;
+        justify-self: center;
+        width: 40vw;
+        height: 60vw;
+        /* height: 70vw; */
+      }
+      /* Grid */
+
+      /* Second Row */
+      .twoColGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 40vw;
+        height: 78vw;
+      }
+
+      .plannerImg {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        width: 18vw;
+      }
+      .laptopImg {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        width: 15vw;
+      }
+      /* Second Row End */
+
+      /* Third Row */
+      .firstRowfirstCol {
+        width: 22vw;
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+      }
+      .firstRowSecondCol {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+        width: 20vw;
+      }
+      /* Third Row End */
+      .box {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <!-- All your content should go in between the body tags -->
+  <body>
+    <div class="grid">
+      <div class="rowOne">
+        <div class="firstRowfirstCol box"></div>
+        <div class="firstRowSecondCol"></div>
+      </div>
+
+      <div class="rowTwo">
+        <div class="box">
+          <!-- <img
+            class="plannerImg"
+            src="images/Journal.png"
+          /> -->
+          <!-- <img class="laptopImg" src="images/Laptop.png" /> -->
+        </div>
+      </div>
+      <div class="rowThree">
+        <div class="box">
+          <div class="twoColGrid">a</div>
+        </div>
+      </div>
+      <div class="colTwo">
+        <div class="box">
+          <!-- <img class="mapImage" src="images/map.png" /> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
