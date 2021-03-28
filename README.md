@@ -1,4 +1,4 @@
-<img src="https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1" width="200">
+<img src="https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1" width="150">
 
 ### Purpose :bow:
 
