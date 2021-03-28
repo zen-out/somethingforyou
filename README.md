@@ -4,13 +4,30 @@
 
 The purpose of this assignment is to create a web application that utilizes HTML, CSS and Javascript, and designing a website to give to someone or a community in Hong Kong.
 
+### How to run
+
+1. cd in this folder
+2. Run the following commands
+
+```
+npm install
+```
+
+```
+json-server --watch db.json
+```
+
+3. Open home.html
+
 ### Description :runner:
 
 Think of a project that you could work on for the next ten days, and something you could build for someone (or a group of people). We will make time to present this presentation in two weeks (April 7).
 
 Details are important; people end up not being careful because they have the belief that things can be completed quickly. The task of a developer, really, is to ensure that we plan out well, and give details the prestige they deserve. The better fix is to get a more accurate vision of things - good things take time to build - you don’t need to aim for perfection. Aim for ‘good enough’.
 
-\*The purpose of this website is also for you to utilize the technologies that we go through in class, so it would be great if you could implement one thing you learned everyday and add that to your website (the most important thing is that you code the application yourself).
+#### important sidenote
+
+The purpose of this website is also for you to utilize the technologies that we go through in class, so it would be great if you could implement one thing you learned everyday and add that to your website (the most important thing is that you code the application yourself).
 
 ### Requirements
 
