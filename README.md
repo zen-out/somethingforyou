@@ -1,6 +1,6 @@
 # something for you
 
-<img src="https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1" width="100" height="100">
+<img src="https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1" width="100">
 
 ### Purpose :bow:
 
