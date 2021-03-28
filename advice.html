@@ -41,20 +41,20 @@
 
     <div class="grid border">
         <div class="gridColOne border">
-            <br/>
+            <br />
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
             <h1>Advice</h1>
-            <br/>
+            <br />
             <center>
                 <input type="text" name="name" id="nameInput" class="form-control mb-4" placeholder="Name">
 
                 <!-- Advice -->
                 <input type="text" name="Advice" id="adviceInput" class="form-control" placeholder="Advice" />
-<br/>
+                <br />
                 <button type="submit" id="submitBtn" class="btn btn-outline-dark waves-effect">Advise
                 </button>
             </center>
@@ -67,8 +67,6 @@
     </div>
 
     <script async defer type="text/javascript">
-
-
         console.log("yo")
         let adviceList = document.querySelector("#adviceList")
         let button = document.querySelector("#submitBtn")
@@ -92,29 +90,30 @@
             adviceList.append(newAdvice)
         }
 
-      var http = new XMLHttpRequest();
+        var http = new XMLHttpRequest();
 
-      var data = "http://localhost:3000/wishes";
+        var data = "http://localhost:3000/wishes";
 
-      function getData(url) {
-        http.open("GET", url);
-        http.onreadystatechange = function () {
-          if (http.readyState != XMLHttpRequest.DONE) {
-            return;
-          } else if (http.status == 200) {
-            let parsed = JSON.parse(http.responseText);
-            for (let i = 0; i < parsed.length; i++) {
-              console.log(parsed[i]);
-              addAdvice(parsed[i].name, parsed[i].advice)
-            }
-          } else {
-            console.log("error occurred" + http.status);
-          }
-        };
+        function getData(url) {
+            http.open("GET", url);
+            http.onreadystatechange = function() {
+                if (http.readyState != XMLHttpRequest.DONE) {
+                    return;
+                } else if (http.status == 200) {
+                    let parsed = JSON.parse(http.responseText);
+                    for (let i = 0; i < parsed.length; i++) {
+                        console.log(parsed[i]);
 
-        http.send();
-      }
-      getData(data);
+                        addAdvice(parsed[i].name, parsed[i].advice)
+                    }
+                } else {
+                    console.log("error occurred" + http.status);
+                }
+            };
+
+            http.send();
+        }
+        getData(data);
     </script>
 </body>
 
