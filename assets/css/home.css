@@ -1,0 +1,92 @@
+:root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+.navColor {
+  color: var(--navColor);
+  z-index: 10;
+}
+
+.flexContainer {
+  margin: 2vh;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  display: flex;
+}
+
+.largeImg {
+  flex: 50 300px;
+  display: flex;
+  flex-flow: column;
+  border: 1px solid black;
+}
+
+.cinnamonImg {
+  bottom: 0;
+  height: 10vh;
+  align-self: flex-start;
+  margin-left: auto;
+  flex: 2 10px;
+}
+.lunchBoxImg {
+  position: fixed;
+  height: 10vh;
+  top: 45vh;
+  left: 15vw;
+}
+
+.hangerImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  right: 20vw;
+}
+
+.stoolImg {
+  position: fixed;
+  height: 25vh;
+  bottom: 0;
+  right: 10vw;
+}
+/*
+
+FIRST DRAFT
+
+body {
+  margin: 30px;
+}
+.header {
+  font-size: 5vw;
+}
+li {
+  font-size: 4vw;
+}
+.grid {
+  display: grid;
+  height: 10vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+}
+.itemThree {
+  grid-column: 3 / span 1;
+  height: 100px;
+  width: 100px;
+}
+.itemFive {
+  grid-column: 5 / span 1;
+  height: 100px;
+  width: 100px;
+}
+main {
+  margin: 50px;
+} */

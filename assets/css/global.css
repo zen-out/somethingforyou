@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+
+body {
+  font-family: "Reenie Beanie", cursive;
+}
+.classyText {
+  font-family: "EB Garamond", serif;
+}
+
+.navGrid {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+}
+.photoImg {
+  align-items: center;
+  flex: 1;
+  top: 0;
+  left: 0;
+  height: 15vh;
+}
+.navContainer {
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+}
+.border {
+  border: 1px solid black;
+}
+.balance {
+  flex: 1;
+}
+.kellyAndRyanHeader {
+  font-size: 5vh;
+}
+.navLink {
+  text-decoration: none;
+  font-size: 3vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+}
+a:hover {
+  color: lightblue;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1e7d8;
+  color: white;
+  text-align: center;
+}
+
+/* .navGrid {
+  display: block;
+  width: 100vw;
+  height: 10vh;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.photoImg {
+  grid-row: 1;
+  grid-column: 1 / span 1;
+  height: 5vh;
+  width: 10px;
+}
+.navContainer {
+  grid-row: 1 / 2;
+  grid-column: 3 / span 5;
+  height: 5vh;
+  width: 50vw;
+} */

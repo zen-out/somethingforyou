@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap");
+/* SECOND DRAFT */
+:root {
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+}
+body {
+  background-color: var(--backgroundColor);
+  font-family: "Reenie Beanie", cursive;
+}
+
+.navColor {
+  color: var(--navColor);
+}
+.rsvpForm {
+  display: grid;
+  /* height: var(--gridHeight); */
+  width: 45vw;
+  margin-top: 20vh;
+  margin-left: 29vw;
+  /* right: 20vw; */
+}
+.cinnamonImg {
+  position: fixed;
+  height: 10vh;
+  top: 30vh;
+  left: 10vw;
+}
+
+.flowersImg {
+  position: fixed;
+  height: 15vh;
+  right: 20vw;
+  bottom: 10vh;
+}
+.mushroomImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  left: 5vw;
+}
+
+.flexContainer {
+  position: fixed;
+  margin: 5vw;
+  top: 25vh;
+}
+.flex {
+  display: flex;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.border {
+  border: 1px black solid;
+}
+
+.inputOne {
+  flex: 4 100px;
+}
+.checkQOne {
+  flex: 2 50px;
+}
+.checkQOneYes {
+  flex: 1 50px;
+}
+.checkQOneNo {
+  flex: 1 50px;
+}
+.rowTwo {
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-direction: row;
+}
+.inputTwo {
+  flex: 4 100px;
+}
+
+.checkQTwo {
+  flex: 2 50px;
+}
+
+.checkQTwoYes {
+  flex: 1 50px;
+}
+.checkQTwoNo {
+  flex: 1 50px;
+}
+
+.rowThree {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.rowThreeColOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inputThree {
+  flex: 4 100px;
+}
+.inputFour {
+  flex: 4 100px;
+}
+.textAreaComment {
+  flex: 1 100px;
+}
+.textAreaWishes {
+  flex: 1 50px;
+}
+
+.rowFour {
+  display: flex;
+  align-items: flex-start;
+}
+
+.formButton {
+  flex: 1;
+}
+
+.rowFive {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.classyInput {
+  font-family: "EB Garamond", serif;
+  color: var(--navColor);
+  background-color: var(--backgroundColor);
+  border: 2px solid var(--navColor);
+  color: #173927;
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+::placeholder {
+  color: var(--navColor);
+}
+input {
+  margin: 10px;
+}
+
+input:focus {
+  color: var(--backgroundColor);
+}

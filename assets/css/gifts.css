@@ -1,0 +1,14 @@
+:root {
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+}
+body {
+  background-color: var(--backgroundColor);
+  font-family: "Reenie Beanie", cursive;
+}
+
+.navColor {
+  color: var(--navColor);
+}

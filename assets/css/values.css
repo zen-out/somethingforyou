@@ -1,0 +1,40 @@
+:root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+
+.navColor {
+  color: var(--navColor);
+  z-index: 10;
+}
+
+.alarmImg {
+  position: fixed;
+  height: 10vh;
+  bottom: 20vh;
+  right: 15vw;
+}
+
+.checklistImg {
+  position: fixed;
+  height: 20vh;
+  left: 10vw;
+  bottom: 30vh;
+}
+.sockImg {
+  position: fixed;
+  height: 8vh;
+  right: 30vw;
+  bottom: 10vh;
+}
+.jumperImg {
+  position: fixed;
+  height: 14vh;
+  top: 30vh;
+  right: 15vw;
+}

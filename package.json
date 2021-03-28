@@ -1,0 +1,26 @@
+{
+  "name": "somethingforyou",
+  "version": "1.0.0",
+  "description": "<img src=\"https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1\" width=\"150\">",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XccelerateOrg/somethingforyou.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XccelerateOrg/somethingforyou/issues"
+  },
+  "homepage": "https://github.com/XccelerateOrg/somethingforyou#readme",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

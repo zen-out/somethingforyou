@@ -1,0 +1,386 @@
+:root {
+  --backgroundColor: black;
+  --navColor: beige;
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+.navColor {
+  color: var(--navColor);
+}
+
+.grid {
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  width: 100%;
+  /*  */
+  position: absolute;
+  grid-auto-flow: column;
+  bottom: 5vh;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: 1fr;
+}
+
+.gridColOne {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  /* border: 1px red solid; */
+  width: 45vw;
+}
+.gridColTwo {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  /* border: 1px red solid; */
+  width: 45vw;
+}
+
+/* <!-- Definitely a learning by doing kind of thing! -->
+      /* Flex */
+/* Flexbox is a bit more easier to manipulate, it's not set to the specific rows and columns so it's easier for you to change your mind later */
+.flexContainer {
+  display: flex;
+  /* In a row container */
+  flex-direction: row;
+  height: var(--gridHeight);
+}
+
+.border {
+  border: 1px beige solid;
+}
+
+/* in column one, create another flex container */
+/* that container should have a flex-direction of column (so make the first row into two columns) */
+/* Not specifying the number of boxes */
+.colOne {
+  display: flex;
+  flex: 2 100px;
+  flex-direction: column;
+}
+
+.rowOne {
+  flex: 1 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.rowOneColOne {
+  flex: 1 100px;
+}
+.rowOneColTwo {
+  flex: 1 100px;
+}
+/* Easy to add columns */
+.rowOneColThree {
+  flex: 1 100px;
+}
+.rowTwo {
+  flex: 1 100px;
+  display: flex;
+  flex-direction: row;
+}
+.rowTwoColOne {
+  flex: 1 100px;
+}
+.rowTwoColTwo {
+  flex: 1 100px;
+}
+
+.rowThree {
+  flex: 1 100px;
+  display: flex;
+  flex-direction: row;
+}
+.rowThreeColOne {
+  flex: 1 100px;
+}
+.rowThreeColTwo {
+  flex: 1 100px;
+}
+
+.map {
+  width: 40vw;
+  grid-column: 2 / span 1;
+  /* flex: 1 100px; */
+}
+.border {
+  /* border: 2px red solid; */
+}
+
+/* FIFTH DRAFT */
+/* :root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --smallCol: 15vw;
+  --halfCol: 45vw;
+  --heightRow: 18vh;
+  --backgroundColor: black;
+  --navColor: beige;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+.navColor {
+  color: var(--navColor);
+}
+
+.grid {
+  margin-top: 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  gap: 1vh;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-self: end;
+}
+
+.firstRowFirstCol {
+  align-self: end;
+  width: var(--smallCol);
+  height: var(--heightRow);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+.firstRowSecondCol {
+  align-self: end;
+  width: var(--smallCol);
+  height: var(--heightRow);
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+.plannerImg {
+  width: var(--smallCol);
+  height: 15vh;
+  grid-row: 2 / span 1;
+  align-self: start;
+  grid-column: 1 / span 1;
+}
+.laptopImg {
+  width: var(--smallCol);
+  height: 18vh;
+  width: 15vw;
+  align-self: start;
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+.thirdRowFirstCol {
+  align-self: start;
+  width: var(--smallCol);
+  height: var(--heightRow);
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+.thirdRowSecondCol {
+  align-self: start;
+  width: var(--smallCol);
+  height: var(--heightRow);
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.mapImage {
+  grid-row: 1 / span 5;
+  grid-column: 3 / span 2;
+  align-self: start;
+  justify-self: end;
+  height: 50vh;
+}
+
+.flex {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dateContent {
+  font-size: 4vw;
+}
+.locationContent {
+  font-size: 4vw;
+}
+.hashtag {
+  font-size: 4vw;
+} */
+/* FOURTH DRAFT */
+
+/* :root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: black;
+  --navColor: beige;
+}
+
+
+body {
+  background-color: var(--backgroundColor);
+  
+}
+.navColor {
+  color: var(--navColor);
+} */
+/* .mapImg {
+    z-index: 1; 
+    background-repeat: no-repeat;
+    width: 35vw;
+    position: fixed; 
+    right: 5vw; 
+    bottom: 30vh; 
+} */
+/* .mapBackground {
+    background-image: url("images/map.png");
+z-index: 2;
+    background-repeat: no-repeat;
+    width: 35vw;
+    position: fixed; 
+    right: 5vw; 
+    bottom: 5vh; 
+} */
+
+/* FOURTH DRAFT END */
+
+/* 
+
+/* Centers columns */
+/* align-self: center; */
+/* Centers rows */
+/* justify-self: center; */
+
+/*
+THIRD DRAFT
+.rowOne {
+  grid-row: 1 / span 1;
+  width: 40vw;
+  height: 26vw;
+  grid-column: 1 / span 1;
+}
+
+.rowTwo {
+  height: 26vw;
+  width: 40vw;
+  align-self: center;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+}
+.rowThree {
+  height: 26vw;
+  width: 40vw;
+  align-self: center;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+.colTwo {
+  grid-row: 1 / span 4;
+  grid-column: 2 / span 1;
+}
+.mapImage {
+  margin: 10px;
+  grid-row: 1 / span 4;
+  grid-column: 3 / span 2;
+  align-self: center;
+  justify-self: center;
+  width: 40vw;
+  height: 60vw;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 40vw;
+  height: 78vw;
+}
+
+
+
+.firstRowfirstCol {
+  width: 22vw;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+.firstRowSecondCol {
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+  width: 20vw;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+*/
+
+/* THIRD DRAFT END */
+
+/* .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+}
+
+.leftColumnRows {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 500px;
+}
+
+.col-1 {
+    grid-column: 1 / span 1;
+}
+
+.col-2 {
+    grid-column: 2 / span 1;
+} */
+
+/* 
+.rowOne {
+  grid-row: 1 / span 1;
+}
+
+.rowTwo {
+  grid-row: 2 / span 1;
+}
+
+.rowThree {
+  grid-row: 3 / span 1;
+} */
+
+/* SECOND DRAFT */
+
+/* .grid {
+  height: 500px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; 
+}
+
+.colOne {
+  grid-column: 1 / span 1;
+}
+
+.threeRows {
+  display: grid;
+  height: 500px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.firstRow {
+  grid-row: 1 / span 1;
+}
+.secondRow {
+  grid-row: 2 / span 1;
+}
+.thirdRow {
+  grid-row: 3 / span 1;
+}
+.colTwo {
+  grid-column: 2 / span 1;
+}
+
+
+.fixedBox {
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+} */

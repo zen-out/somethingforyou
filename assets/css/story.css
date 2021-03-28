@@ -1,0 +1,164 @@
+:root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+.navColor {
+  color: var(--navColor);
+  z-index: 10;
+}
+
+.flexContainer {
+  margin: 2vh;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  display: flex;
+}
+
+.paellaImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  right: 15vw;
+  z-index: 10;
+}
+
+.sangriaImg {
+  position: fixed;
+  height: 10vh;
+  left: 20vw;
+  bottom: 10vh;
+  z-index: 10;
+}
+.mushroomImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  left: 5vw;
+  z-index: 10;
+}
+.cardBackground {
+  z-index: 1;
+}
+.cardGrid {
+  z-index: 1;
+  top: 22vh;
+  margin: auto;
+  gap: 12px;
+  left: 5vw;
+  justify-content: center;
+  /* align-items: center; */
+  position: absolute;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  display: grid;
+}
+.card {
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+}
+.cardColOne {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  /* border: 1px solid black; */
+}
+.cardColTwo {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  /* border: 1px solid black; */
+}
+.cardColThree {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+  /* border: 1px solid black; */
+}
+
+/* first draft */
+/* .grid {
+  display: grid;
+  height: 10vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+}
+.chairWithPot {
+  height: 22vw;
+  grid-column: 5 / span 1;
+}
+.photoSize {
+  width: 250px;
+}
+.grid {
+  display: grid;
+  height: 10vw;
+  margin: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.infoText {
+  margin: 50px;
+}
+.photo {
+  padding: 15px;
+}
+.gallery {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
+  margin: 20px;
+} */
+/* .photoOne {
+        grid-column: 2 / span 1;
+        margin: 15px;
+      } */
+/* .photoContainerOne {
+  position: relative;
+  text-align: center;
+
+  grid-column: 2 / span 1;
+  margin: 15px;
+}
+.subtitleOne {
+  display: none;
+  position: absolute;
+  font-size: 3vw;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+}
+.subtitleOne:hover {
+  display: block;
+}
+.photoContainerTwo {
+  grid-column: 3 / span 1;
+  margin: 15px;
+}
+.photoContainerThree {
+  grid-column: 4 / span 1;
+  margin: 15px;
+}
+.photoContainerOne:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.photoContainerTwo:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.photoContainerThree:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+} */
