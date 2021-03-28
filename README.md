@@ -1,6 +1,6 @@
 # something for you
 
-![For You](https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1=250x250)
+![For You](https://www.dropbox.com/s/a1m01q7jjxz7sfh/foryou.png?raw=1 | width=100)
 
 ### Purpose :bow:
 
