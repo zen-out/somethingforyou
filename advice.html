@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Tab Name -->
+    <title>My First Website</title>
+
+    <!-- Viewport is the user's visible area of web page sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/advice.css" />
+</head>
+
+<!-- All your content should go in between the body tags -->
+
+<body class="reenieFont">
+    <center>
+        <div class="navGrid">
+            <div class="photoImg">
+                <img src="assets/images/Photographs.png" class="photoImg" />
+            </div>
+            <div class="navContainer navColor">
+
+                <h1 class="kellyAndRyanHeader">Kelly & Ryan</h1>
+                <br />
+                <a class="navLink navColor" href="home.html">Home</a>
+                <a class="navLink navColor" href="information.html">Information</a>
+                <a class="navLink navColor" href="values.html">Values</a>
+                <a class="navLink navColor" href="story.html">Story</a>
+                <a class="navLink navColor" href="rsvp.html">RSVP</a>
+                <!-- <a class="navLink navColor" href="gifts.html">Gifts</a> -->
+                <a class="navLink navColor" href="advice.html">Advice</a>
+
+            </div>
+            <div class="balance"></div>
+        </div>
+        </div>
+    </center>
+
+    <div class="grid border">
+        <div class="gridColOne border">
+            <br/>
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1>Advice</h1>
+            <br/>
+            <center>
+                <input type="text" name="name" id="nameInput" class="form-control mb-4" placeholder="Name">
+
+                <!-- Advice -->
+                <input type="text" name="Advice" id="adviceInput" class="form-control" placeholder="Advice" />
+<br/>
+                <button type="submit" id="submitBtn" class="btn btn-outline-dark waves-effect">Advise
+                </button>
+            </center>
+        </div>
+        <div class="gridColTwo border">
+            <ul id="adviceList">
+
+            </ul>
+        </div>
+    </div>
+
+    <script async defer type="text/javascript">
+
+
+        console.log("yo")
+        let adviceList = document.querySelector("#adviceList")
+        let button = document.querySelector("#submitBtn")
+        let name = document.querySelector("#nameInput")
+        let advice = document.querySelector("#adviceInput")
+
+        // On click, grab the name and advice values
+        button.addEventListener("click", (event) => {
+            console.log("Name", name.value)
+            console.log("Advice", advice.value)
+            // Reset the name and advice values 
+            addAdvice(name.value, advice.value)
+            advice.value = ""
+            name.value = ""
+        })
+
+        // Function here that will append name and advice to page 
+        function addAdvice(name, advice) {
+            let newAdvice = document.createElement("li");
+            newAdvice.textContent = `${advice} (${name})`
+            adviceList.append(newAdvice)
+        }
+
+      var http = new XMLHttpRequest();
+
+      var data = "http://localhost:3000/wishes";
+
+      function getData(url) {
+        http.open("GET", url);
+        http.onreadystatechange = function () {
+          if (http.readyState != XMLHttpRequest.DONE) {
+            return;
+          } else if (http.status == 200) {
+            let parsed = JSON.parse(http.responseText);
+            for (let i = 0; i < parsed.length; i++) {
+              console.log(parsed[i]);
+              addAdvice(parsed[i].name, parsed[i].advice)
+            }
+          } else {
+            console.log("error occurred" + http.status);
+          }
+        };
+
+        http.send();
+      }
+      getData(data);
+    </script>
+</body>
+
+</html>

@@ -82,6 +82,88 @@ body {
   /* border: 1px solid black; */
 }
 
+/* SECOND DRAFT */
+
+/* :root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+.navColor {
+  color: var(--navColor);
+  z-index: 10;
+}
+
+.flexContainer {
+  margin: 2vh;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  display: flex;
+}
+
+.paellaImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  right: 15vw;
+  z-index: 10;
+}
+
+.sangriaImg {
+  position: fixed;
+  height: 10vh;
+  left: 20vw;
+  bottom: 10vh;
+  z-index: 10;
+}
+.mushroomImg {
+  position: fixed;
+  height: 10vh;
+  top: 20vh;
+  left: 5vw;
+  z-index: 10;
+}
+.cardBackground {
+  z-index: 1;
+}
+.cardGrid {
+  z-index: 1;
+  top: 22vh;
+  margin: auto;
+  gap: 12px;
+  left: 5vw;
+  justify-content: center;
+  position: absolute;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  display: grid;
+}
+.card {
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+}
+.cardColOne {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+}
+.cardColTwo {
+  grid-column: 2 / span 1;
+  grid-row: 1;
+}
+.cardColThree {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+} */
+
 /* first draft */
 /* .grid {
   display: grid;

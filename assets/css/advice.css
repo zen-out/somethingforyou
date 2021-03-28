@@ -1,0 +1,61 @@
+:root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+body {
+  background-color: var(--backgroundColor);
+}
+li {
+  font-size: 2.5vh;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+  color: var(--navColor);
+}
+.navColor {
+  color: var(--navColor);
+  z-index: 10;
+}
+
+.grid {
+  margin: 3vw;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  width: 100%;
+  /*  */
+  position: absolute;
+  grid-auto-flow: column;
+  bottom: 5vh;
+  display: grid;
+  grid-template-columns: 45vw 45vw;
+  grid-template-rows: 1fr;
+}
+
+.gridColOne {
+  padding: 2vw;
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  width: 45vw;
+}
+.gridColTwo {
+  overflow: scroll;
+  padding: 2vw;
+  grid-column: 2 / span 1;
+  grid-row: 1;
+  /* border: 1px red solid; */
+  width: 45vw;
+}
+
+.border {
+  border: 1px solid black;
+}
