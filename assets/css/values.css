@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+
 :root {
   --gridWidth: 90vw;
   --gridHeight: 70vh;
@@ -37,4 +39,96 @@ body {
   height: 14vh;
   top: 30vh;
   right: 15vw;
+}
+
+:root {
+  --gridWidth: 90vw;
+  --gridHeight: 70vh;
+  --backgroundColor: beige;
+  --navColor: #3b7b80;
+}
+
+.grid {
+  margin: 3vw;
+  height: var(--gridHeight);
+  width: var(--gridWidth);
+  width: 100%;
+  /*  */
+  position: absolute;
+  grid-auto-flow: column;
+  bottom: 5vh;
+  display: grid;
+  grid-template-columns: 45vw 3vw 45vw;
+  grid-template-rows: 1fr;
+}
+
+.gridColOne {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  width: 45vw;
+}
+.gridColTwo {
+  grid-column: 2 / span 1;
+  width: 3vw;
+  grid-row: 1;
+}
+
+.gridColThree {
+  overflow: scroll;
+  grid-column: 3 / span 1;
+  grid-row: 1;
+  /* border: 1px red solid; */
+  width: 45vw;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.hoverBtn {
+  font-family: "Reenie Beanie", cursive;
+  margin-top: 13vh;
+  border: 2px solid lightblue;
+  background: none;
+  padding: 1vw 1vw;
+  font-size: 15px;
+  /* text-transform: uppercase; */
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  color: #3b7b80;
+  overflow: hidden;
+}
+
+.hoverBtn:hover {
+  color: white;
+}
+
+.hoverBtn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  z-index: -1;
+  border-radius: 50% 50% 0% 0%;
+  height: 0%;
+  transition: all 0.5s;
+}
+
+.hoverBtn:hover:before {
+  height: 190%;
+}
+
+/* Make something occur when hover */
+.btnOne {
+}
+/* Make something occur when hover */
+.btnTwo {
+}
+
+/* Make something occur when hover */
+.btnThree {
 }
