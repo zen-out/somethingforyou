@@ -59,67 +59,45 @@
       </div>
     </center>
 
-    <!-- TEST -->
-    <!-- <div
-      class="animsition"
-      style="
-        height: 150px;
-        background-color: darkolivegreen;
-      "
-      data-animsition-in-class="fade-in-up-sm"
-      data-animsition-out-class="fade-out-up-sm"
-      data-animsition-in-duration="2000"
-    >
-      <h1>Animsition: data options 1</h1>
-    </div>
+    <img src="assets/images/Alarm.png" class="alarmImg" />
 
-    <div
-      class="animsition"
-      style="height: 150px; background-color: pink"
-      data-animsition-in-class="fade-in-down-sm"
-      data-animsition-out-class="fade-out-down-sm"
-      data-animsition-in-duration="2000"
-    >
-      <h1>Sandbox: data options 2</h1>
-    </div> -->
+    <img src="assets/images/Jumper.png" class="jumperImg" />
 
-    <!-- TEST -->
-    <div
-      class="js-animsition animsition"
-      data-animsition-in-class="fade-in-left"
-      data-animsition-out-class="fade-out-left"
-    >
-      <img src="assets/images/Alarm.png" class="alarmImg" />
+    <img src="assets/images/Sock.png" class="sockImg" />
 
-      <img
-        src="assets/images/Jumper.png"
-        class="jumperImg"
-      />
-
-      <img src="assets/images/Sock.png" class="sockImg" />
-
-      <img
-        src="assets/images/Checklist.png"
-        class="checklistImg"
-      />
-      <div class="grid">
-        <div class="gridColOne border container">
-          <p>Lorem ipsum</p>
+    <img
+      src="assets/images/Checklist.png"
+      class="checklistImg"
+    />
+    <div class="grid">
+      <div class="gridColOne border">
+        <br />
+        <div class="leftCard">
+          <p class="partOne noDisplay">part one</p>
+          <p class="partTwo noDisplay">part two</p>
+          <p class="partThree noDisplay">part three</p>
         </div>
+      </div>
 
-        <div class="gridColTwo border container">
-          <a href="values.html" class="btnOne">
-            <button class="hoverBtn">one</button></a
-          >
-          <a href="valuesTwo.html" class="btnTwo">
-            <button class="hoverBtn">two</button></a
-          >
-          <a href="valuesThree.html" class="btnThree">
-            <button class="hoverBtn">three</button>
-          </a>
+      <div class="gridColTwo border">
+        <!-- <a href="values.html" class="btnOne"> -->
+        <button class="hoverBtn btnOne">one</button>
+        <!-- </a> -->
+        <!-- <a href="values.html" class="btnTwo"> -->
+        <button class="hoverBtn btnTwo">two</button>
+        <!-- </a> -->
+        <!-- <a href="values.html" class="btnThree"> -->
+        <button class="hoverBtn btnThree">three</button>
+        <!-- </a> -->
+      </div>
+
+      <div class="gridColThree border">
+        <br />
+        <div class="rightCard">
+          <p class="partOne noDisplay">part one</p>
+          <p class="partTwo noDisplay">part two</p>
+          <p class="partThree noDisplay">part three</p>
         </div>
-
-        <div class="gridColThree border"></div>
       </div>
     </div>
 
@@ -137,13 +115,132 @@
       defer
     ></script>
     <script type="text/javascript">
+      /**********************************************
+       * .animate(properties, duration, easing, complete)
+       * ==================================
+       * The first parameter accepts an object of CSS properties and values
+       *
+       * The second parameter is the duration
+       *
+       * The third parameter is an object of options that includes duration, easing, queue,
+       *
+       * The fourth parameter is the function to call once the animation is complete
+       ***********************************************/
+
+      /**********************************************
+       * .animate(properties, options)
+       * ==================================
+       * The first parameter is an object of css properties and values
+       *
+       * The second parameter is an object of options
+       ***********************************************/
       $(document).ready(function () {
-        // grab the button
-        // make the checklist fade in from left
-        // make the
-        // on button click one, make the card fade in
-        // on button click two, make the second fade in
-        // on button click three, make the third card fade in
+        $(".jumperImg").animate(
+          {
+            right: 50,
+            opacity: "show",
+          },
+          1500
+        );
+        $(".sockImg").animate(
+          {
+            right: 200,
+            opacity: "show",
+          },
+          1500
+        );
+        $(".checklistImg").animate(
+          {
+            left: 50,
+            opacity: "show",
+          },
+          2000
+        );
+        $(".alarmImg").animate(
+          {
+            right: 100,
+            opacity: "show",
+          },
+          2000
+        );
+
+        function slideIn(element) {}
+
+        $(".btnOne").on("click", function () {
+          console.log("clicked button one");
+          $(".partTwo").hide();
+          $(".partThree").hide();
+          $(".partOne").slideDown("slow");
+          //   $(".partOne").animate(
+          //     {
+          //       right: 100,
+          //       opacity: "show",
+          //     },
+          //     2000
+          //   );
+        });
+
+        $(".btnTwo").on("click", function () {
+          console.log("clicked button two");
+          $(".partOne").hide();
+          $(".partThree").hide();
+          $(".partTwo").slideDown("slow");
+          //   $(".partTwo").animate(
+          //     {
+          //       right: 100,
+          //       opacity: "show",
+          //     },
+          //     2000
+          //   );
+        });
+
+        $(".btnThree").on("click", function () {
+          console.log("clicked button three");
+          $(".partOne").hide();
+          $(".partTwo").hide();
+          //   $(".partTwo").animate(
+          //     {
+          //       right: 100,
+          //       opacity: "hide",
+          //     },
+          //     1000
+          //   );
+          $(".partThree").slideDown("slow");
+          //   $(".partThree").animate(
+          //     {
+          //       right: 100,
+          //       opacity: "show",
+          //     },
+          //     2000
+          //   );
+        });
+
+        // $(".alarmImg").animate(
+        //   {
+        //     // usually css properties that have numeric values
+        //     left: 200,
+        //     opacity: "show",
+        //   },
+        //   {
+        //     // number or string to determine how long animation will run
+        //     duration: 1500,
+        //     // string indicating which easing function to use
+        //     easing: swing,
+        //     // begin immediately? false
+        //     queue: false,
+        //     // step: function to be called for each animated property of each element
+        //     // progress: a function to be called after each step of the animation, only once per animated element
+        //     // start: function to call when the animation on an element begins
+        //     // done: a function to be called when the animation is complete
+        //   }
+        // );
+
+        // // grab the button
+        // // make the checklist fade in from left
+        // // make the
+        // // on button click one, make the card fade in
+        // // on button click two, make the second fade in
+        // // on button click three, make the third card fade in
       });
     </script>
   </body>

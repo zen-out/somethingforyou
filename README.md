@@ -95,3 +95,22 @@ In my HTML document I used:
 ### Example fixes
 
 You should also include how you overcame the many bugs that you encountered when coding your application.
+
+variables
+btnOne, btnTwo, btnThree
+leftCard, rightCard
+partOne, partTwo, partThree
+
+- [ ] when you click on btnOne, left card will slide down
+- [ ] Initial Setting: display, none
+- [ ] On click
+- [ ] - [ ] on click
+        left card will slide down
+        is initial
+
+- [ x] alarmImg: fade in from left
+- [ x] jumperImg: fade in from right
+- [ x] sockImg: fade in from right
+- [ x] checklistImg: fade in from left
+- [ ] on click one, get the left card to fade in
+- [ ]
