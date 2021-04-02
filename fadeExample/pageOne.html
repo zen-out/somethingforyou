@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Tab Name -->
+    <title>my billionth draft</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/animsition/dist/css/animsition.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/animsition/css/style.css"
+    />
+  </head>
+
+  <!-- All your content should go in between the body tags -->
+
+  <div
+    class="js-animsition animsition"
+    data-animsition-in-class="fade-in-down"
+    data-animsition-out-class="fade-out-down"
+  >
+    hello
+  </div>
+
+  <body class="container">
+    <div
+      class="animsition"
+      data-animsition-in-class="fade-in"
+      data-animsition-in-duration="1000"
+      data-animsition-out-class="fade-out"
+      data-animsition-out-duration="800"
+    >
+      <h1>Page One should fade in and fade out?</h1>
+    </div>
+    <a
+      href="pageOne.html"
+      class="animsition-link"
+      data-animsition-out-class="rotate-out-sm"
+    >
+      <button
+        type="button"
+        class="btn btn-outline-dark waves-effect"
+      >
+        Page One
+      </button>
+    </a>
+    <a href="pageTwo.html" class="animsition-link">
+      <button
+        type="button"
+        class="btn btn-outline-dark waves-effect"
+      >
+        Page Two
+      </button>
+    </a>
+    <a href="pageThree.html" class="animsition-link">
+      <button
+        type="button"
+        class="btn btn-outline-dark waves-effect"
+      >
+        Page Three
+      </button>
+    </a>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+      async
+      defer
+      type="text/javascript"
+    />
+    <script
+      type="text/javascript"
+      async
+      defer
+      src="../assets/libraries/animsition/dist/js/animsition.min.js"
+    />
+    <script
+      type="text/javascript"
+      async
+      defer
+      src="../assets/libraries/animsition/js/docs.js"
+    />
+
+    <script async defer type="text/javascript">
+      $(document).ready(function () {
+        $(".animsition").animsition({
+          inClass: "fade-in",
+          outClass: "fade-out",
+          inDuration: 1500,
+          outDuration: 800,
+          linkElement: ".animsition-link",
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: true,
+          loadingParentElement: "body", //animsition wrapper element
+          loadingClass: "animsition-loading",
+          loadingInner: "", // e.g '<img src="loading.svg" />'
+          timeout: false,
+          timeoutCountdown: 5000,
+          onLoadEvent: true,
+          browser: [
+            "animation-duration",
+            "-webkit-animation-duration",
+          ],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay: false,
+          overlayClass: "animsition-overlay-slide",
+          overlayParentElement: "body",
+          transition: function (url) {
+            window.location.href = url;
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

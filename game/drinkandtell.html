@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Tab Name -->
+    <title>my billionth draft</title>
+
+    <!-- Viewport is the user's visible area of web page sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css" />
+    <!-- Link style sheet here -->
+    <style>
+        .checkboxAnswer {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+        }
+    </style>
+</head>
+
+<!-- All your content should go in between the body tags -->
+
+<body class="font3">
+    <div class="container">
+
+
+        <!-- Test -->
+        <!-- Make into same row -->
+        <div class="row">
+            <div class="col-1">
+                <input class="form-check-input" type="checkbox" value="" id="materialCheckbox11">
+                <label class="form-check-label" for="materialCheckbox11">
+            </div>
+            <div class="col-11">
+                <p class="checkboxAnswer input-group-append">
+                    Try to find out why he wants to do it and then organize a small event in which he could perform.
+                </p>
+            </div>
+        </div>
+
+        <div id="drinkAndTell">click on me</div>
+
+
+        <!-- JQuery Data Manipulation -->
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title" id="question">
+                    Due to an administrative error, I discover that
+                    I have been receiving an extra $1000 HKD in my
+                    payslip. The company is large, and this amount
+                    means very little to them. What do I do?
+                </div>
+                <!-- Card and four buttons -->
+                <button type="button" id="optionA" class="btn btn-outline-dark waves-effect">
+                    Option A
+                </button>
+
+                <!-- Click once -> that will be the right answer -->
+                <button type="button" id="optionB" class="btn btn-outline-dark waves-effect">
+                    Option B
+                </button>
+
+                <button type="button" id="optionC" class="btn btn-outline-dark waves-effect">
+                    Option C
+                </button>
+                <!-- Fourth option -->
+                <button type="button" id="optionD" class="btn btn-outline-dark waves-effect">
+                    Option D
+                </button>
+
+                <!-- Click second time -> confirm the right answer -->
+                <!-- Go to second card  -->
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        /**********************************************
+         * Functionality
+         * ==================================
+         * Users will be able to generate a card, based on the object.
+         * Users will be able to click on the answer
+         * Users will be able to click on the second answer to validate
+         *
+         * Click on the answer
+         ***********************************************/
+        $(document).ready(function() {
+            let questions = [{
+                    id: 1,
+                    question: "Due to an administrative error, I discover that I have been receiving an extra $1000 HKD in my payslip. The company is large, and this amount means very little to them. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 2,
+                    question: "After years of marriage, I've realized that my spouse is completely wrong for me and I begin to contemplate leaving them for good. I am deeply worried about ending up alone, and suspect that an imperfect marriage is an acceptable price for avoiding loneliness. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 3,
+                    question: "In a supermarket, I notice a skinny woman with a small child slipping cans of soup into her bag. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 4,
+                    question: "Crossing a bridge, I come across a young man standing on the edge, preparing to jump. When I attempt to approach him, he calls for me to step back. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 5,
+                    question: "My mother has been diagnosed a degenerative disease, leaving me to take care of her. I don't want to give up my own life in order to preserve hers. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 6,
+                    question: "At a family event, I get stuck talking to a distance relative, who wants to explain in great detail how to fetch data from an API. I am intensely bored and really want to leave, but not at risk of offending them. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 7,
+                    question: "When I was growing up, my father treated the entire family terribly - drinking, cheating on my mom, and finally running away with a friend. He phones years later, alone in a hospice in Scotland. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 8,
+                    question: "My brother loves stand up comedy and has signed up to perform at an open mic night and I have agreed to act as a test audience for him. The set is terrible, and I know he will be humiliated that night. What do I do?",
+                    optionA: "Tell him honestly why he shouldn't do it.",
+                    optionB: "Try to find out why he wants to do it and then organize a small event in which he could perform.",
+                    optionC: "Ask him why he wants to do it, try to talk him out of it but attend anyway.",
+                    optionD: "It's okay. Lie to him. Practice more with him. Be there for him anyway.",
+                },
+                {
+                    id: 9,
+                    question: "My best friend has confessed that they are cheating on their partner, with whom you are also very close to. I have been sworn to secrecy, but hate lying to my friends. What would I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+                {
+                    id: 10,
+                    question: "After having a child, my partner and I have agreed that between the two of us, one of us will give up our jobs. My partner works at a law firm with a decent salary, and I work at a charity which pays less, but is extremely rewarding. What do I do?",
+                    optionA: "optionA",
+                    optionB: "optionB",
+                    optionC: "optionC",
+                    optionD: "optionD",
+                },
+            ];
+            let drinkAndTellTag = $("#drinkAndTell");
+
+            function checkAnswer(event) {
+                console.log("Target element", event.target);
+            }
+            drinkAndTellTag.on("click", checkAnswer);
+
+            function makeCard(questionObject) {
+                const questionCard = $(`
+    <div class="card" style="margin: 2vh;">
+      <div class="card-body">
+        <div class="card-title" id="question">
+         ${questionObject.question}
+        </div>
+        <button
+          type="button"
+          id="optionA"
+          class="btn btn-outline-dark waves-effect"
+        >
+          ${questionObject.optionA}
+        </button>
+        <button
+          type="button"
+          id="optionB"
+          class="btn btn-outline-dark waves-effect"
+        >
+          ${questionObject.optionB}
+        </button>
+
+        <button
+          type="button"
+          id="optionC"
+          class="btn btn-outline-dark waves-effect"
+        >
+          ${questionObject.optionC}
+        </button>
+        <button
+          type="button"
+          id="optionD"
+          class="btn btn-outline-dark waves-effect"
+        >
+          ${questionObject.optionD}
+        </button>
+      </div>
+    </div>`);
+                drinkAndTellTag.append(questionCard);
+                return questionCard;
+            }
+            let question = $("#question");
+            let optionA = $("#optionA");
+            let optionB = $("#optionB");
+            let optionC = $("#optionC");
+            let optionD = $("#optionD");
+            for (let i = 0; i < questions.length; i++) {
+                makeCard(questions[i]);
+            }
+            /**********************************************
+  
+        * Get the correct answer
+         * ==================================
+         ***********************************************/
+
+            function getFirstAnswer(event) {
+                console.log(event.target);
+            }
+
+            function validateAnswer(event) {
+                let targetElement = event.target;
+                // grab that tag
+            }
+
+            /**********************************************
+             * It's like writing an essay
+             * ==================================
+             * 1. Main Idea: Play a game ->
+             *  -> array of objects
+             *  -> render onto a card
+             *  ->
+             *
+             *
+             * 2. Outline
+             *    - Functionality first
+             *    - UI
+             *
+             * 3. First draft
+             * 4. Edit
+             * 5. Second draft
+             * 6. Edit
+             ***********************************************/
+        });
+
+        /**********************************************
+         * Have an array of objects
+         * ==================================
+         * object has
+         * id: 1
+         * question: ""
+         * optionA: "",
+         * optionB: "",
+         * optionC: "",
+         * optionD: ""
+         ***********************************************/
+        class QuizGame {
+            constructor(questions) {
+                this.questions = questions;
+            }
+            initialize() {}
+            generate() {}
+            firstAnswer() {}
+            secondAnswer() {}
+            checkAnswer() {}
+            generateNextQuestion() {}
+        }
+
+        class Question {
+            constructor(question) {
+                this.question = question;
+            }
+            generateQuestion() {
+                let template = ``;
+            }
+        }
+        /**********************************************
+         * 1. Render each object onto a template
+         * ==================================
+         ***********************************************/
+
+        /**********************************************
+         * 2. When someone clicks on the answer, that id will be stored as the answer
+         * ==================================
+         ***********************************************/
+
+        /**********************************************
+         * 3. Someone else clicks, and guess will be stored as another variable.
+         * ==================================
+         ***********************************************/
+        /**********************************************
+         * 4. Compare the two variables
+         * ==================================
+         ***********************************************/
+    </script>
+</body>
+
+</html>
