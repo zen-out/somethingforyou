@@ -1,5 +1,5 @@
 console.log("hello");
-$(document).ready(function() {
+$(document).ready(function () {
   //   let btnOne = document.querySelector(".btnOne");
   //   let btnTwo = document.querySelector(".btnTwo");
   //   let btnThree = document.querySelector(".btnThree");
