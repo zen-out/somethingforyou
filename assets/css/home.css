@@ -38,21 +38,21 @@ body {
   position: fixed;
   height: 10vh;
   top: 45vh;
-  left: 15vw;
+  left: 0;
 }
 
 .hangerImg {
   position: fixed;
   height: 10vh;
   top: 20vh;
-  right: 20vw;
+  right: 0;
 }
 
 .stoolImg {
   position: fixed;
   height: 25vh;
   bottom: 0;
-  right: 10vw;
+  right: 0;
 }
 /*
 

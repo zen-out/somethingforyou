@@ -23,14 +23,14 @@ body {
   position: fixed;
   height: 10vh;
   top: 20vh;
-  right: 15vw;
+  right: 0;
   z-index: 10;
 }
 
 .sangriaImg {
   position: fixed;
   height: 10vh;
-  left: 20vw;
+  left: 0;
   bottom: 10vh;
   z-index: 10;
 }
@@ -38,7 +38,7 @@ body {
   position: fixed;
   height: 10vh;
   top: 20vh;
-  left: 5vw;
+  left: 0;
   z-index: 10;
 }
 .cardBackground {

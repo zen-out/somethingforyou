@@ -17,7 +17,7 @@ npm install
 json-server --watch db.json
 ```
 
-3. Open home.html
+3. Open index.html
 
 ### Description :runner:
 
@@ -101,12 +101,15 @@ btnOne, btnTwo, btnThree
 leftCard, rightCard
 partOne, partTwo, partThree
 
-- [ ] when you click on btnOne, left card will slide down
-- [ ] Initial Setting: display, none
-- [ ] On click
-- [ ] - [ ] on click
-        left card will slide down
-        is initial
+- [ ] How do we make the jquery load thing less staticky?
+- [ ] make all the images slide in
+- [ ]
+- [x ] when you click on btnOne, left card will slide down
+- [ x] Initial Setting: display, none
+- [ x] On click
+- [ x] - [ ] on click
+  left card will slide down
+  is initial
 
 - [ x] alarmImg: fade in from left
 - [ x] jumperImg: fade in from right

@@ -26,13 +26,13 @@ body {
   position: fixed;
   height: 10vh;
   top: 30vh;
-  left: 10vw;
+  left: 0;
 }
 
 .flowersImg {
   position: fixed;
   height: 15vh;
-  right: 20vw;
+  right: 0;
   bottom: 10vh;
 }
 .mushroomImg {

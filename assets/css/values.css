@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
 
 :root {
-  --gridWidth: 90vw;
+  --gridWidth: 80vw;
   --gridHeight: 70vh;
   --backgroundColor: beige;
   --navColor: #3b7b80;
@@ -28,7 +28,7 @@ body {
   position: fixed;
   height: 20vh;
   left: 0vw;
-  bottom: 30vh;
+  bottom: 5vh;
 }
 
 .sockImg {
@@ -47,6 +47,7 @@ body {
 
 .grid {
   margin: 3vw;
+  left: 3vw;
   height: var(--gridHeight);
   width: var(--gridWidth);
   /*  */
@@ -54,14 +55,14 @@ body {
   grid-auto-flow: column;
   bottom: 5vh;
   display: grid;
-  grid-template-columns: 42vw 6vw 42vw;
+  grid-template-columns: 37vw 6vw 37vw;
   grid-template-rows: 1fr;
 }
 
 .gridColOne {
   grid-column: 1 / span 1;
   grid-row: 1;
-  width: 42vw;
+  width: 37vw;
   height: var(--gridHeight);
 }
 
@@ -78,7 +79,7 @@ body {
   height: var(--gridHeight);
   grid-row: 1;
   /* border: 1px red solid; */
-  width: 42vw;
+  width: 37vw;
 }
 
 /* .border {
@@ -96,7 +97,7 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
-  color: #3b7b80;
+  color: lightblue;
   overflow: hidden;
 }
 
@@ -128,8 +129,12 @@ body {
 
 .leftCard {
   height: 40vh;
-  width: var(--cardWidth);
-  margin-right: 4vw;
+  width: 33vw;
+  /* background-color: white; */
+}
+.rightCard {
+  height: 40vh;
+  width: 33vw;
   /* background-color: white; */
 }
 .partOne {
@@ -138,20 +143,14 @@ body {
   height: 100%;
 }
 .partTwo {
-  background-color: pink;
+  background-color: white;
   width: 100%;
   height: 100%;
 }
 .partThree {
-  background-color: lightblue;
+  background-color: white;
   width: 100%;
   height: 100%;
-}
-
-.rightCard {
-  height: 40vh;
-  width: var(--cardWidth);
-  /* background-color: white; */
 }
 
 .noDisplay {
@@ -164,4 +163,9 @@ body {
 
 /* Make something occur when hover */
 .btnThree {
+}
+
+.cardText {
+  padding: 2vw;
+  font-size: 1em;
 }

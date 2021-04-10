@@ -33,7 +33,7 @@
         <div class="navContainer navColor">
           <h1 class="kellyAndRyanHeader">Kelly & Ryan</h1>
           <br />
-          <a class="navLink navColor" href="home.html"
+          <a class="navLink navColor" href="index.html"
             >Home</a
           >
           <a
@@ -71,33 +71,86 @@
     />
     <div class="grid">
       <div class="gridColOne border">
-        <br />
-        <div class="leftCard">
-          <p class="partOne noDisplay">part one</p>
-          <p class="partTwo noDisplay">part two</p>
-          <p class="partThree noDisplay">part three</p>
-        </div>
+        <center>
+          <br />
+
+          <br />
+          <br />
+          <div class="leftCard">
+            <div class="partOne noDisplay">
+              <p class="cardText">part one</p>
+            </div>
+            <div class="partTwo noDisplay">
+              <p class="cardText">part one</p>
+            </div>
+            <div class="partThree noDisplay">
+              <p class="cardText">part one</p>
+            </div>
+          </div>
+        </center>
       </div>
 
       <div class="gridColTwo border">
-        <!-- <a href="values.html" class="btnOne"> -->
-        <button class="hoverBtn btnOne">one</button>
-        <!-- </a> -->
-        <!-- <a href="values.html" class="btnTwo"> -->
-        <button class="hoverBtn btnTwo">two</button>
-        <!-- </a> -->
-        <!-- <a href="values.html" class="btnThree"> -->
-        <button class="hoverBtn btnThree">three</button>
-        <!-- </a> -->
+        <center>
+          <!-- <a href="values.html" class="btnOne"> -->
+          <button class="hoverBtn btnOne">one</button>
+          <!-- </a> -->
+          <!-- <a href="values.html" class="btnTwo"> -->
+          <button class="hoverBtn btnTwo">two</button>
+          <!-- </a> -->
+          <!-- <a href="values.html" class="btnThree"> -->
+          <button class="hoverBtn btnThree">three</button>
+          <!-- </a> -->
+        </center>
       </div>
 
       <div class="gridColThree border">
-        <br />
-        <div class="rightCard">
-          <p class="partOne noDisplay">part one</p>
-          <p class="partTwo noDisplay">part two</p>
-          <p class="partThree noDisplay">part three</p>
-        </div>
+        <center>
+          <br />
+
+          <br />
+          <br />
+          <div class="rightCard">
+            <div class="partOne noDisplay">
+              <p class="cardText">
+                The knowledge that you have emerged wiser
+                and stronger from setbacks means that you
+                are, ever after, secure in your ability to
+                survive. You will never truly know yourself,
+                or the strength of your relationships, until
+                both have been tested by adversity. Such
+                knowledge is a true gift, for all that it is
+                painfully won, and it has been worth more
+                than any qualification I ever earned.
+              </p>
+            </div>
+            <div class="partTwo noDisplay">
+              <p class="cardText">
+                Your intelligence, your capacity for hard
+                work, the education you have earned and
+                received, give you unique status, and unique
+                responsibilities. Even your nationality sets
+                you apart. The great majority of you belong
+                to the world’s only remaining superpower.
+                The way you vote, the way you live, the way
+                you protest, the pressure you bring to bear
+                on your government, has an impact way beyond
+                your borders. That is your privilege, and
+                your burden.
+              </p>
+            </div>
+            <div class="partThree noDisplay">
+              <p class="cardText">
+                Failure taught me things about myself that I
+                could have learned no other way. I
+                discovered that I had a strong will, and
+                more discipline than I had suspected; I also
+                found out that I had friends whose value was
+                truly above the price of rubies.
+              </p>
+            </div>
+          </div>
+        </center>
       </div>
     </div>
 
@@ -151,17 +204,17 @@
         );
         $(".checklistImg").animate(
           {
-            left: 50,
+            left: 30,
             opacity: "show",
           },
-          2000
+          1500
         );
         $(".alarmImg").animate(
           {
             right: 100,
             opacity: "show",
           },
-          2000
+          1500
         );
 
         function slideIn(element) {}
@@ -170,77 +223,22 @@
           console.log("clicked button one");
           $(".partTwo").hide();
           $(".partThree").hide();
-          $(".partOne").slideDown("slow");
-          //   $(".partOne").animate(
-          //     {
-          //       right: 100,
-          //       opacity: "show",
-          //     },
-          //     2000
-          //   );
+          $(".partOne").slideDown(1000);
         });
 
         $(".btnTwo").on("click", function () {
           console.log("clicked button two");
           $(".partOne").hide();
           $(".partThree").hide();
-          $(".partTwo").slideDown("slow");
-          //   $(".partTwo").animate(
-          //     {
-          //       right: 100,
-          //       opacity: "show",
-          //     },
-          //     2000
-          //   );
+          $(".partTwo").slideDown(3000, function () {
         });
 
         $(".btnThree").on("click", function () {
           console.log("clicked button three");
           $(".partOne").hide();
           $(".partTwo").hide();
-          //   $(".partTwo").animate(
-          //     {
-          //       right: 100,
-          //       opacity: "hide",
-          //     },
-          //     1000
-          //   );
-          $(".partThree").slideDown("slow");
-          //   $(".partThree").animate(
-          //     {
-          //       right: 100,
-          //       opacity: "show",
-          //     },
-          //     2000
-          //   );
+          $(".partThree").slideDown(2000);
         });
-
-        // $(".alarmImg").animate(
-        //   {
-        //     // usually css properties that have numeric values
-        //     left: 200,
-        //     opacity: "show",
-        //   },
-        //   {
-        //     // number or string to determine how long animation will run
-        //     duration: 1500,
-        //     // string indicating which easing function to use
-        //     easing: swing,
-        //     // begin immediately? false
-        //     queue: false,
-        //     // step: function to be called for each animated property of each element
-        //     // progress: a function to be called after each step of the animation, only once per animated element
-        //     // start: function to call when the animation on an element begins
-        //     // done: a function to be called when the animation is complete
-        //   }
-        // );
-
-        // // grab the button
-        // // make the checklist fade in from left
-        // // make the
-        // // on button click one, make the card fade in
-        // // on button click two, make the second fade in
-        // // on button click three, make the third card fade in
       });
     </script>
   </body>
