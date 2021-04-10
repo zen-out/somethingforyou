@@ -77,13 +77,13 @@
         button.addEventListener("click", (event) => {
             console.log("Name", name.value)
             console.log("Advice", advice.value)
-            // Reset the name and advice values 
+            // Reset the name and advice values
             addAdvice(name.value, advice.value)
             advice.value = ""
             name.value = ""
         })
 
-        // Function here that will append name and advice to page 
+        // Function here that will append name and advice to page
         function addAdvice(name, advice) {
             let newAdvice = document.createElement("li");
             newAdvice.textContent = `${advice} (${name})`
