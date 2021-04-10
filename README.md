@@ -17,7 +17,7 @@ npm install
 json-server --watch db.json
 ```
 
-3. Open home.html
+3. Open index.html
 
 ### Description :runner:
 
@@ -95,3 +95,25 @@ In my HTML document I used:
 ### Example fixes
 
 You should also include how you overcame the many bugs that you encountered when coding your application.
+
+variables
+btnOne, btnTwo, btnThree
+leftCard, rightCard
+partOne, partTwo, partThree
+
+- [ ] How do we make the jquery load thing less staticky?
+- [ ] make all the images slide in
+- [ ]
+- [x ] when you click on btnOne, left card will slide down
+- [ x] Initial Setting: display, none
+- [ x] On click
+- [ x] - [ ] on click
+  left card will slide down
+  is initial
+
+- [ x] alarmImg: fade in from left
+- [ x] jumperImg: fade in from right
+- [ x] sockImg: fade in from right
+- [ x] checklistImg: fade in from left
+- [ ] on click one, get the left card to fade in
+- [ ]

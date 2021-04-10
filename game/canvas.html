@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="" />
+    <style>
+      /* canvas {
+        background: url(http://i.imgur.com/5RIXWIE.png);
+      } */
+    </style>
+  </head>
+  <body>
+    <canvas width="630"></canvas>
+    <canvas id="canvas"></canvas>
+    <div style="display: none">
+      <img
+        id="source"
+        src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+        width="300"
+        height="227"
+      />
+    </div>
+    <div class="txtStyle">STROKE-ON CANVAS</div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" async defer>
+      /**********************************************
+       *
+       * ==================================
+       * 1. Get context
+       * 2. Dash Length
+       * 3.
+       * 4. Speed
+       * 5. Text
+       * 6. x
+       * 7. i
+       * 8. Set context font, linewidth, stroke style, globalAlpha and lineJoin
+       * 9. Create a function called loop
+       *    clearRect: erases the pixels by setting them to transparent black
+       *    setLineDash
+       *    strokeText
+       *    requestAnimationFrame
+       *    fillText
+       *    measureText
+       *    setTransform
+       *    rotate
+       ***********************************************/
+      var ctx = document
+          .querySelector("canvas")
+          .getContext("2d"),
+        dashLen = 220,
+        dashOffset = dashLen,
+        speed = 5,
+        txt = "STROKE-ON CANVAS",
+        x = 30,
+        i = 0;
+
+      ctx.font =
+        "50px Comic Sans MS, cursive, TSCu_Comic, sans-serif";
+      ctx.lineWidth = 5;
+      ctx.lineJoin = "round";
+      ctx.globalAlpha = 2 / 3;
+      ctx.strokeStyle = ctx.fillStyle = "#1f2f90";
+
+      (function loop() {
+        // Erases pixels
+        // (x, y, width, height)
+        // (start at 30 x, start at 0 y, width: 60, height: 150)
+        // makes it look less staticky
+        ctx.clearRect(x, 0, 60, 150);
+        // Create a dashed line
+        // 15 3 3 3 would look like
+        // 15  3  3  3 15  3  3  3  15
+        // ---    -    ---    -    ---
+        // 0, 215
+        //
+        // create a long dash mask
+        // Creates the actual stroke
+        ctx.setLineDash([
+          dashLen - dashOffset,
+          dashOffset - speed,
+        ]);
+        // reduce dash length
+        // draws outline of characters at specified coordinates
+        // ensures that something is happening
+        dashOffset -= speed;
+        // (text, x, y, [, maxWidth])
+        //
+        // Creates the actual stroke
+        ctx.strokeText(txt[i], x, 90); // stroke letter
+
+        // Request animation frame tells the browser to perform an animation and requests that the browser calls a function to update an animation
+        // sets callback
+        if (dashOffset > 0) requestAnimationFrame(loop);
+        // animate
+        else {
+          // draws a text string at specified coordinates
+          // fill final letter
+          // fills in final letters
+          ctx.fillText(txt[i], x, 90);
+          dashOffset = dashLen; // prep next char
+          x +=
+            ctx.measureText(txt[i++]).width +
+            ctx.lineWidth * Math.random();
+          ctx.setTransform(
+            1,
+            0,
+            0,
+            1,
+            0,
+            3 * Math.random()
+          ); // random y-delta
+          ctx.rotate(Math.random() * 0.005); // random rotation
+          if (i < txt.length) requestAnimationFrame(loop);
+        }
+      })();
+    </script>
+  </body>
+</html>

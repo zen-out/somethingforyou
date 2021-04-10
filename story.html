@@ -1,53 +1,174 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <!-- Tab Name -->
     <title>My First Website</title>
 
     <!-- Viewport is the user's visible area of web page sets the initial zoom level when the page is first loaded by the browser. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
 
     <!-- Link style sheet here -->
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/story.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="assets/libraries/flippingGallery.css"
+    />
+  </head>
 
-<!-- All your content should go in between the body tags -->
+  <!-- All your content should go in between the body tags -->
 
-<body class="reenieFont">
+  <body class="reenieFont">
     <center>
-        <div class="navGrid">
-            <div class="photoImg">
-                <img src="assets/images/Photographs.png" class="photoImg" />
-            </div>
-            <div class="navContainer navColor">
-
-                <h1 class="kellyAndRyanHeader">Kelly & Ryan</h1>
-                <br />
-                <a class="navLink navColor" href="home.html">Home</a>
-                <a class="navLink navColor" href="information.html">Information</a>
-                <a class="navLink navColor" href="values.html">Values</a>
-                <a class="navLink navColor" href="story.html">Story</a>
-                <a class="navLink navColor" href="rsvp.html">RSVP</a>
-                <!-- <a class="navLink navColor" href="gifts.html">Gifts</a> -->
-                 <a class="navLink navColor" href="advice.html">Advice</a>
-
-            </div>
-            <div class="balance"></div>
+      <div class="navGrid">
+        <div class="photoImg">
+          <img
+            src="assets/images/Photographs.png"
+            class="photoImg"
+          />
         </div>
+        <div class="navContainer navColor">
+          <h1 class="kellyAndRyanHeader">Kelly & Ryan</h1>
+          <br />
+          <a class="navLink navColor" href="index.html"
+            >Home</a
+          >
+          <a
+            class="navLink navColor"
+            href="information.html"
+            >Information</a
+          >
+          <a class="navLink navColor" href="values.html"
+            >Values</a
+          >
+          <a class="navLink navColor" href="story.html"
+            >Story</a
+          >
+          <a class="navLink navColor" href="rsvp.html"
+            >RSVP</a
+          >
+          <!-- <a class="navLink navColor" href="gifts.html">Gifts</a> -->
+          <a class="navLink navColor" href="advice.html"
+            >Advice</a
+          >
         </div>
+        <div class="balance"></div>
+      </div>
     </center>
-    <img src="assets/images/Sangria.png" class="sangriaImg" />
-    <img src="assets/images/Mushroom.png" class="mushroomImg" />
+    <img
+      src="assets/images/Sangria.png"
+      class="sangriaImg"
+    />
+    <img
+      src="assets/images/Mushroom.png"
+      class="mushroomImg"
+    />
     <img src="assets/images/Paella.png" class="paellaImg" />
     <div class="cardGrid">
-    <div class="cardColOne card"></div>
-     <div class="cardColTwo card"></div>
-     <div class="cardColThree card"></div>
-</div>
+      <div class="cardColOne card"></div>
+      <div class="cardColTwo card"></div>
+      <div class="cardColThree card"></div>
+    </div>
+    <!-- Flipping Gallery -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <div class="page-container">
+        <div class="gallery" style="height: 40vh">
+          <a
+            href="#"
+            data-caption="Trekking in Chhomrong, Himalayas, Nepal"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
+          <a
+            href="#"
+            data-caption="Ghandruk, getting a good feel of the local"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
+          <a href="#" data-caption="This was a thriller!"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
+          <a
+            href="#"
+            data-caption="You can always find a decent coffee shop, even in the Himalayas!"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
 
-</body>
+          <a
+            href="#"
+            data-caption="Ghandruk, getting a good feel of the local"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
+          <a href="#" data-caption="This was a thriller!"
+            ><img
+              class="flippingImage"
+              src="https://www.cerclemagazine.com/wp-content/uploads/2017/10/316_N-Atlantic-Ocean-Cliffs-of-Moher-1989.jpg"
+          /></a>
+        </div>
+      </div>
+    </center>
+    <!-- Flipping Gallery -->
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/libraries/flippingGallery.js"></script>
+    <script type="text/javascript" async defer>
+      $(document).ready(function () {
+        $(".gallery").flipping_gallery({
+          direction: "forward", // This is will set the flipping direction when the gallery is clicked. Options available are "forward", or "backward". The default value is forward.
+          selector: "> a", // This will let you change the default selector which by default, will look for <a> tag and generate the gallery from it. This option accepts normal CSS selectors.
+          spacing: 15, // You can set the spacing between each photo in the gallery here. The number represents the pixels between each photos. The default value is 10.
+          showMaximum: 15, // This will let you limit the number of photos that will be in the viewport. In case you have a gazillion photos, this is perfect to hide all those photos and limit only a few in the viewport.
+          enableScroll: true, // Set this to false if you don't want the plugin to override your scrolling behavior. The default value is true.
+          flipDirection: "bottom", // You can now set which direction the picture will flip to. Available options are "left", "right", "top", and "bottom". The default value is bottom.
+          autoplay: false, // You can set the gallery to autoplay by defining the interval here. This option accepts value in milliseconds. The default value is false.
+        });
+
+        $(".sangriaImg").animate(
+          {
+            left: 70,
+            opacity: "show",
+          },
+          2000
+        );
+        $(".mushroomImg").animate(
+          {
+            left: 60,
+            opacity: "show",
+          },
+          1500
+        );
+        $(".paellaImg").animate(
+          {
+            right: 50,
+            opacity: "show",
+          },
+          1500
+        );
+      });
+    </script>
+  </body>
 </html>
